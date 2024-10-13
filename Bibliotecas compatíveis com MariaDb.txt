@@ -1,0 +1,25 @@
+Bibliotecas compatíveis com MariaDb 
+
+1. JPA / Hibernate (com Spring Data JPA)
+Spring Data JPA é a biblioteca mais comum para interagir com bancos de dados relacionais (incluindo MariaDB) em uma aplicação Spring Boot. Ele usa o Hibernate como provedor de JPA por padrão. Com essa abordagem, você pode mapear entidades para tabelas no banco de dados e utilizar repositórios para gerenciar operações de CRUD (Create, Read, Update, Delete).
+
+Compatível com MariaDB: Totalmente compatível.
+Configuração simplificada: Insere e recupera dados com base em classes de entidade. Usa repositórios para facilitar a interação com o banco.
+
+2.Spring Security oferece autenticação baseada em banco de dados de forma simplificada. Ele pode ser configurado para usar o banco de dados MariaDB diretamente, seja com JDBC (para queries SQL) ou com JPA (usando entidades).
+
+Autenticação JDBC: Usa queries SQL para recuperar informações de autenticação diretamente do banco.
+Autenticação com JPA: Usa entidades mapeadas ao banco de dados para fazer a autenticação com mais flexibilidade.
+
+3. Spring Data JDBC
+Se você preferir não usar JPA e Hibernate, pode utilizar o Spring Data JDBC. Ele oferece uma abordagem mais leve para interagir com o banco MariaDB, sem toda a complexidade do ORM (Object Relational Mapping) do Hibernate.
+
+Menos overhead: Comparado com JPA/Hibernate, é mais simples e direto.
+Suporte a MariaDB: Totalmente compatível, usando SQL diretamente.
+
+
+4. Spring Security com OAuth2 e JWT (Autenticação via API REST)
+Se você está construindo uma API REST e prefere uma autenticação sem estado, pode usar o OAuth2 com JWT para gerar tokens que são armazenados no lado do cliente. Spring Security OAuth2 é fácil de integrar com MariaDB.
+
+JWT Tokens: Você pode usar JWTs para autenticar usuários sem precisar gerenciar sessões no servidor.
+Integração com banco de dados: Armazena os dados de usuários e permissões no MariaDB, mas o fluxo de autenticação é tratado via tokens.
